@@ -11,13 +11,11 @@ Stampare di nuovo il paragrafo e la sua lunghezza, dopo aver sostituito con tre 
     $_GET["string"];
 
     $newParagraph = str_replace($_GET["string"],"*****",$paragraph);
-
+    $paragraphLength = strlen($newParagraph);
     
 
 ?>
 
 <p style= "margin: 50px;"> <?php echo "Paragrafo originale : " . $paragraph; ?> </p>
 
-<p style= "margin: 50px;"> <?php echo "Paragrafo modificato : " . $newParagraph; ?> </p>
-
-<p></p>
+<p style= "margin: 50px;"> <?php echo "Paragrafo modificato : " . $newParagraph . " " . "Lunghezza : " . $paragraphLength ?> </p>
