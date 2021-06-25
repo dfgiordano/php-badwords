@@ -7,15 +7,16 @@ Stampare di nuovo il paragrafo e la sua lunghezza, dopo aver sostituito con tre 
     $paragraph ="Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, maxime!Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, obcaecati?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta, nihil.
     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam, aut.
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, pariatur!";
-    
+    $paragraphLength = strlen($paragraph);
+    /* http://localhost:8888/php-badwords/?string=Lorem  */
     $_GET["string"];
 
-    $newParagraph = str_replace($_GET["string"],"*****",$paragraph);
-    $paragraphLength = strlen($newParagraph);
+    $newParagraph = str_replace($_GET["string"],"***",$paragraph);
+    $newParagraphLength = strlen($newParagraph);
     
 
 ?>
 
-<p style= "margin: 50px;"> <?php echo "Paragrafo originale : " . $paragraph; ?> </p>
+<p style= "margin: 50px;"> <?php echo "Paragrafo originale : " . $paragraph . " " . $paragraphLength; ?> </p>
 
-<p style= "margin: 50px;"> <?php echo "Paragrafo modificato : " . $newParagraph . " " . "Lunghezza : " . $paragraphLength ?> </p>
+<p style= "margin: 50px;"> <?php echo "Paragrafo modificato : " . $newParagraph . " " . "Lunghezza : " . $newParagraphLength ?> </p>
